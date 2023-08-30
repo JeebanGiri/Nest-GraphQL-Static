@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Car {
+  id: Int!
+  name: String!
+  price: Int
+}
+
+type Query {
+  demo: String!
+  carsList: [Car!]!
+  findCarsById(carId: Int!): Car
+}
+
+type Mutation {
+  deleteCarsById(carId: Int!): String!
+  addCar(addCarArgs: AddCarArgs!): String!
+  updateCar(carId: Int!, updateCarArgs: UpdateCarArgs!): String!
+}
+
+input AddCarArgs {
+  id: Int!
+  name: String!
+  price: Int!
+}
+
+input UpdateCarArgs {
+  id: Int!
+  name: String!
+  price: Int!
+}

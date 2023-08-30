@@ -1,0 +1,44 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/node"
+        }
+    ],
+    "output": "dist",
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "https://example.com/api/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
+        }
+    ],
+    "env": {
+        "MY_API_KEY": "@my-api-key"
+    },
+    "alias": {
+        "/about": "/pages/about.html"
+    },
+    "redirects": [
+        {
+            "source": "/old-page",
+            "destination": "/new-page",
+            "statusCode": 301
+        }
+    ],
+    "headers": [
+        {
+            "source": "/images/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=604800"
+                }
+            ]
+        }
+    ]
+}
