@@ -6,9 +6,6 @@
             "use": "@vercel/node"
         }
     ],
-    "env": {
-        "MY_API_KEY": "@my-api-key"
-    },
     "redirects": [
         {
             "source": "/old-page",
