@@ -19,9 +19,6 @@
     "env": {
         "MY_API_KEY": "@my-api-key"
     },
-    "alias": {
-        "/about": "/pages/about.html"
-    },
     "redirects": [
         {
             "source": "/old-page",
